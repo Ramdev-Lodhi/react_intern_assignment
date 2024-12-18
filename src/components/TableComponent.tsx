@@ -50,11 +50,6 @@ const TableComponent: React.FC<Table> = ({
       tableStyle={{ minWidth: "50rem" }}
     >
       <Column
-        header="S.No."
-        body={(_rowData, { rowIndex }) => <>{rowIndex + 1}</>}
-        headerStyle={{ width: "5rem" }}
-      />
-      <Column
         header={
           <>
             <Checkbox onChange={onSelectAllChange} checked={isAllSelected} />
@@ -74,7 +69,11 @@ const TableComponent: React.FC<Table> = ({
         )}
         headerStyle={{ width: "3rem" }}
       />
-      <Column field="id" header="ID" sortable />
+      <Column
+        header="S.No."
+        body={(_rowData, { rowIndex }) => <>{rowIndex + 1}</>}
+        headerStyle={{ width: "5rem" }}
+      />
       <Column field="title" header="Title" sortable />
       <Column field="place_of_origin" header="Place of Origin" sortable />
       <Column field="artist_display" header="Artist Display" sortable />
