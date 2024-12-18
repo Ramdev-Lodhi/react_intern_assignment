@@ -1,4 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-createRoot(document.getElementById("root")!).render(<StrictMode></StrictMode>);
+import PrimeReactDataTable from "./primeReactDataTable.tsx";
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <PrimeReactDataTable />
+  </StrictMode>
+);
