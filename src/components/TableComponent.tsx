@@ -55,8 +55,8 @@ const TableComponent: React.FC<Table> = ({
             <Checkbox onChange={onSelectAllChange} checked={isAllSelected} />
             <Button
               icon="pi pi-chevron-down"
-              onClick={(e) => overlayPanelRef.current?.toggle(e)} // Use ref to toggle OverlayPanel
-              className="p-button-text p-button-rounded p-button-info"
+              onClick={(e) => overlayPanelRef.current?.toggle(e)}
+              className="p-button-text p-button-info"
               style={{ marginLeft: "10px" }}
             />
           </>
@@ -67,12 +67,12 @@ const TableComponent: React.FC<Table> = ({
             onChange={(e) => onRowSelectChange(e, rowData.id)}
           />
         )}
-        headerStyle={{ width: "3rem" }}
+        headerStyle={{ width: "8rem" }}
       />
       <Column
         header="S.No."
         body={(_rowData, { rowIndex }) => <>{rowIndex + 1}</>}
-        headerStyle={{ width: "5rem" }}
+        headerStyle={{ width: "5rem", textAlign: "center" }}
       />
       <Column field="title" header="Title" sortable />
       <Column field="place_of_origin" header="Place of Origin" sortable />
